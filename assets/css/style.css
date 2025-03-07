@@ -1576,14 +1576,16 @@ p.txtLarge {font-size: 50px; font-weight: 600; text-transform: uppercase; paddin
     border-radius: 50%;
 	position: absolute;
     top: 50%;
+    transform: translate(0, -50%);
 	border: 1px solid #d9d9d9;
-    display: flex
-;
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     opacity: 0.4;
     transition: opacity 0.3sease-out;
+	
+	
 }
 .bannerSlider .carousel-control-prev {left: 30px;}
 .bannerSlider .carousel-control-next { right: 30px;}
@@ -1608,17 +1610,33 @@ p.txtLarge {font-size: 50px; font-weight: 600; text-transform: uppercase; paddin
 .shipping img, .payment-option img {height: 30px; width: auto;}
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
 
 .section-title {font-size: 2.2rem;}
-.navbar .container-fluid .row div:nth-child(1) { order: 1;}
+.navbar .container-fluid .row div:nth-child(1) { order: 1; margin: 0; padding: 0; width: 40px;}
 .navbar .container-fluid .row div:nth-child(2) { order: 3; margin: 0; padding: 0;}
-.navbar .container-fluid .row div:nth-child(3) { order: 1;}
+.navbar .container-fluid .row div:nth-child(3) { order: 2; margin: 0; padding: 0; width: 100%; max-width: 102px;}
 	
-button.navbar-toggler {position: absolute; right: 25px; top: 20px;}
+button.navbar-toggler {position: absolute; right: 16px; top: 20px;}
 .navbar .offcanvas-body { padding: 0 20px !important;}
+.bannerSlider .carousel-item, .bannerSlider .carousel-item img {height: 30vh;}
+	
+	h1, h2, h3, h4, h5, h6 { margin: 0!important;}
+	.intro img.rounded { margin-top: 20px;}
+	
 	
 }
+
+@media only screen and (max-width: 767px) {
+	
+	.py-5, .py-4, .py-3, .py-2 {padding-top: 1rem !important; padding-bottom: 1rem !important;}
+	.my-5, .my-4, .my-3, .my-2 {margin-top: 1rem !important; margin-bottom: 1rem !important;}
+	.mt-5, .mt-4, .mt-3, .mt-2 {margin-top: 1rem!important;}
+	.swiper {margin: 0; padding: 0 10px;}
+	#new-arrival .swiper { padding: 0;}
+	.container {padding: 0 20px;}
+	.collection-content.p-5 {padding: 2rem!important;}
+	.instagram .row.g-0 {--bs-gutter-x: 20px;} 
 
 
 .test {}
