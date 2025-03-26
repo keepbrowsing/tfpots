@@ -291,11 +291,21 @@
                     <li>
                       <a href="#" class="dropdown-item item-anchor">All</a>
                     </li>
-                    <li>
-                      <a href="#" class="dropdown-item item-anchor">By Shape</a>
+                    <li class="nav-item dropdown-child">
+                      <a href="#" class="dropdown-item item-anchor dropdown-child-toggle">By Shape</a>
+					  <ul class="dropdown-child-menu">
+						  <li><a href="#">Rounded</a></li>
+						  <li><a href="#">Rectangle</a></li>
+						  <li><a href="#">Square</a></li>
+					  </ul>
                     </li>
-                    <li>
-                      <a href="#" class="dropdown-item item-anchor">By Size</a>
+                    <li class="nav-item dropdown-child">
+                      <a href="#" class="dropdown-item item-anchor dropdown-child-toggle">By Size</a>
+						<ul class="dropdown-child-menu">
+						  <li><a href="#">Small</a></li>
+						  <li><a href="#">Medium</a></li>
+						  <li><a href="#">Large</a></li>
+					  </ul>
                     </li>
                     <li>
                       <a href="#" class="dropdown-item item-anchor">Woodfire</a>
@@ -1319,6 +1329,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+</script>
+	
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    // Select all dropdown-child-toggle links
+    document.querySelectorAll(".dropdown-child-toggle").forEach(item => {
+        item.addEventListener("click", function (e) {
+            e.preventDefault(); // Prevent default link behavior
+            e.stopPropagation(); // Prevent Bootstrap from closing parent dropdown
+
+            // Close all other open submenus
+            document.querySelectorAll(".dropdown-child-menu").forEach(menu => {
+                if (menu !== this.nextElementSibling) {
+                    menu.classList.remove("show");
+                }
+            });
+
+            // Toggle the clicked submenu
+            let submenu = this.nextElementSibling;
+            if (submenu && submenu.classList.contains("dropdown-child-menu")) {
+                submenu.classList.toggle("show");
+            }
+        });
+    });
+
+    // Close submenus when clicking outside
+    document.addEventListener("click", function (e) {
+        document.querySelectorAll(".dropdown-child-menu").forEach(menu => {
+            if (!menu.contains(e.target) && !menu.previousElementSibling.contains(e.target)) {
+                menu.classList.remove("show");
+            }
+        });
+    });
+});
+
 </script>
 	
   <script src="assets/js/jquery.min.js"></script>
