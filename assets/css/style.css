@@ -1652,16 +1652,85 @@ p.txtLarge {font-size: 50px; font-weight: 600; text-transform: uppercase; paddin
 .shipping img, .payment-option img {height: 30px; width: auto;}
 
 
+.innerPageTitle { position: relative; overflow: hidden;}
+.innerPageTitle:before { content: ""; width: 100%; height: 100vh; background: #000000b5; position: absolute; z-index: 1;}
+.innerPageTitle img { width: 100%; position: absolute; z-index: 0; min-height: 120px; object-fit: cover;}
+.innerPageTitle .section-title {position: relative; z-index: 2; color: #FFF;}
+
+.cForm {display: flex; flex-direction: column; gap: 20px; padding: 20px 70px 0 0;}
+.cForm .form-group{ display: flex; flex-wrap: nowrap; gap: 10px;}
+.cForm label { width: 100%; max-width: 120px;}
+.cForm .form-group .input-group {align-items: center;}
+.cForm span.input-group-addon {width: 38px; aspect-ratio: 1; display: flex; align-items: center; background: #000; justify-content: center;
+
+-webkit-border-top-left-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius-topleft: 4px;
+-moz-border-radius-bottomleft: 4px;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;}
+.cForm span i {color: #FFF;}
+
+.inputTextArea { position: relative; overflow: hidden;}
+.inputTextArea span.input-group-addon:before {
+	content: "";
+	width: 38px;
+	height: 100%;
+	background: #000;
+	position: absolute;
+	z-index: -1;
+	-webkit-border-top-left-radius: 4px!important;
+-webkit-border-bottom-left-radius: 4px!important;
+-moz-border-radius-topleft: 4px!important;
+-moz-border-radius-bottomleft: 4px!important;
+border-top-left-radius: 4px!important;
+border-bottom-left-radius: 4px!important;
+}
+
+.cForm .btn-dark {width: 100%;
+    max-width: fit-content;}
+
+.photoGraphy .row { align-items: center;}
+
+
+.postHead {display: flex; gap: 15px;}
+.user img { width: 100%; max-width: 70px; aspect-ratio: 1; object-fit: cover;}
+.phInfo {padding-top: 6px;}
+.phInfo .title-small { margin: 0!important; padding: 0!important;}
+
+
+.postBanner { padding: 20px 0 0 0;}
+.postBanner img { width: 100%; height: 500px; object-fit: cover;}
+.postDetails { padding: 20px 0 0 0;}
+
+.socialShare {padding: 25px 0 0 0;}
+.socialShare h6 { margin: 0; padding: 0; font-size: 20px;}
+.social a {padding-right: 20px;}
+.postDetails p {margin-bottom: 0; padding-bottom: 0;}
+
+.productShowcase {padding: 30px 0 0 0; margin-top: 30px; border-top: 1px solid #d7d7d7;}
+.productShowcase .title-small {margin: 0; padding: 0 0 10px 0;}
+.productShowcase .socialShare {padding: 0;}
+
+.productList { margin: 0; padding: 20px 0 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;}
+
+
+.limitedInfo { width: 100%; max-width: 60%;}
+.title-small { font-size: 25px!important; font-weight: 600!important;}
+
+
 @media only screen and (max-width: 991px) {
 
 .section-title {font-size: 2.2rem;}
-.navbar .container-fluid .row div:nth-child(1) { order: 1; margin: 0; padding: 0; padding: 20px 20px 0 20px; width: 100%;}
+.navbar .container-fluid .row div:nth-child(1) { order: 1; margin: 0; padding: 0; padding: 0;}
 .navbar .container-fluid .row div:nth-child(2) { order: 3; margin: 0; padding: 0;}
-.navbar .container-fluid .row div:nth-child(3) { order: 2; margin: 0; padding: 0; width: 100%; max-width: 102px;}
+.navbar .container-fluid .row div:nth-child(3) { order: 2; margin: 0 25px 0 0; padding: 0; width: 100%; max-width: 102px;}
 	
 button.navbar-toggler {position: absolute; right: 16px; top: 20px;}
 .navbar .offcanvas-body { padding: 0 20px !important;}
 .bannerSlider .carousel-item, .bannerSlider .carousel-item img {height: 30vh;}
+	
+	.productList {padding: 15px 0 0 0; grid-template-columns: repeat(2, 1fr); gap: 30px;}
 	
 	h1, h2, h3, h4, h5, h6 { margin: 0!important;}
 	.intro img.rounded { margin-top: 20px;}
@@ -1690,6 +1759,23 @@ button.navbar-toggler {position: absolute; right: 16px; top: 20px;}
 	.bannerSlider .carousel-control-next {right: 15px;}
     .bannerSlider .carousel-control-prev, .bannerSlider .carousel-control-next {width: 40px; height: 40px;}
 	.bannerSlider .carousel-control-next-icon, .bannerSlider .carousel-control-prev-icon {width: 1.5rem; height: 1.5rem;}
+	
+	
+	.innerPageTitle .section-title {padding: 15px 0;}
+	.limitedInfo {max-width: 100%;}
+	.cForm {flex-direction: column; gap: 10px; padding: 0;}
+	.cForm .form-group {flex-direction: column;}
+	.giftCard {padding: 20px 0 0 0;}
+	
+	.postHead {display: block;}
+	.postBanner img {height: auto;}
+	
+	.productShowcase {padding: 15px 0 0 0; margin-top: 15px;}
+	.productList {grid-template-columns: repeat(1, 1fr); gap: 20px;}
+	
+
+
+}
 
 
 .test {}
