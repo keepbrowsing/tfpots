@@ -931,23 +931,23 @@ img {
   width: 100%;
   height: auto;
   overflow: hidden;
-  transform: scale(1);
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+ /* transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);*/
 }
 
 .image-zoom-effect:hover .image-holder {
-  transform: scale(0.95);
+  /*transform: scale(0.95);*/
 }
 
 .image-zoom-effect img {
-  transform: scale(1);
+  /*transform: scale(1);
   will-change: transform;
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);*/
   z-index: 0;
 }
 
 .image-zoom-effect:hover img {
-  transform: scale(1.1);
+  /*transform: scale(1.1);*/
 }
 
 
@@ -1714,10 +1714,18 @@ border-bottom-left-radius: 4px!important;
 
 .productList { margin: 0; padding: 20px 0 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;}
 
+.collection.eqlHeight .collection-item img { min-height: 700px;object-fit: cover;}
+
 
 .limitedInfo { width: 100%; max-width: 60%;}
 .title-small { font-size: 25px!important; font-weight: 600!important;}
 
+
+@media only screen and (max-width: 1200px) {
+	
+	.collection-content.m-md-5 {margin: 0!important;}
+	
+}
 
 @media only screen and (max-width: 991px) {
 
@@ -1730,10 +1738,12 @@ button.navbar-toggler {position: absolute; right: 16px; top: 20px;}
 .navbar .offcanvas-body { padding: 0 20px !important;}
 .bannerSlider .carousel-item, .bannerSlider .carousel-item img {height: 30vh;}
 	
-	.productList {padding: 15px 0 0 0; grid-template-columns: repeat(2, 1fr); gap: 30px;}
+.productList {padding: 15px 0 0 0; grid-template-columns: repeat(2, 1fr); gap: 30px;}
+.collection.eqlHeight .collection-item img {min-height: 604px;}
+
 	
-	h1, h2, h3, h4, h5, h6 { margin: 0!important;}
-	.intro img.rounded { margin-top: 20px;}
+h1, h2, h3, h4, h5, h6 { margin: 0!important;}
+.intro img.rounded { margin-top: 20px;}
 	
 	
 }
@@ -1772,6 +1782,7 @@ button.navbar-toggler {position: absolute; right: 16px; top: 20px;}
 	
 	.productShowcase {padding: 15px 0 0 0; margin-top: 15px;}
 	.productList {grid-template-columns: repeat(1, 1fr); gap: 20px;}
+	.collection.eqlHeight .collection-item img {min-height: auto;}
 	
 
 
